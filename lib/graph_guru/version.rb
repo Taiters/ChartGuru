@@ -1,3 +1,3 @@
-module ChartGuru
+module GraphGuru
   VERSION = "0.0.1"
 end

@@ -1,0 +1,25 @@
+<div id="<%= id %>" style="<%= styles %>"></div>
+
+<script>
+	new Morris.Line({
+		element: "<%= id %>",
+		data: <%= data.to_json.html_safe %>,
+		xkey: 'key',
+		ykeys: ['value'],
+		labels: ['Value'],
+		dateFormat: function(x) {
+			<% if format.nil? %>
+				return new Date(x).toString();
+			<% else %>
+				return moment.unix(x*0.001).format('<%= format %>')
+			<% end %>
+		},
+		xLabelFormat: function(x) {
+			<% if format.nil? %>
+				return x.toString();
+			<% else %>
+				return moment(x).format('<%= format %>');
+			<% end %> 
+		}
+	});
+</script>

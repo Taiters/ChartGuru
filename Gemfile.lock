@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    chart_guru (0.0.1)
+    graph_guru (0.0.1)
       rails (~> 4.2.0)
 
 GEM
@@ -108,5 +108,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  chart_guru!
+  graph_guru!
   sqlite3
